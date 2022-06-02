@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --main-color: #3D38FF;
+  --main-dark-color: #2F2ECA; 
+  --dark-color: #011523;
+  --light-color: #FCFDFE;
+  --lighter-color: #FEFEFE;
+  --p-color: #6B6D6E;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-color);
+}
+
+h1, h2, h3 {
+  color: var(--dark-color);
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  line-height: 1.5;
+  color: var(--p-color);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--dark-color);
+}
+
+.button {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  border-radius: 0.5rem;
+  border: 1px solid #FFFFFF00;
+  padding: 0.625rem 1.25rem;
+}
+
+.button:hover {
+  background-color: var(--main-dark-color);
+}
+
+.buttonborder {
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.buttonborder:hover {
+  background-color: transparent;
+  color: var(--main-dark-color);
+  border-color: var(--main-dark-color);
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Top navbar */
+
+header {
+  background-color: var(--lighter-color);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.navwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+header > .navwrapper > nav {
+  display: flex;
+  align-items: center;
+}
+
+header > .navwrapper > nav > a {
+  margin-right: 2.5rem;
+  color: var(--dark-color);
+}
+
+header > .navwrapper > nav > a:hover:not(.logo) {
+  color: var(--main-dark-color);
+}
+
+/* Hero section */
+
+main {
+  margin: 5rem 0 0 0;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > img {
+  width: 50%;
+  border-radius: 0.5rem;
+}
+
+.underline {
+  background-image: linear-gradient(120deg, #FF59B7 0%, #FFC92F 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 20%;
+  background-position: 0 88%;
+}
+
+main > .herosection > p {
+  margin-top: 2rem;
+}
+
+main > .herosection > .button {
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.blur {
+  position: absolute;
+  z-index: -1;
+  width: 48rem;
+  height: 20rem;
+  border-radius: 50%;
+  -webkit-filter: blur(36rem);
+  filter: blur(36rem);
+  opacity: 0.3;
+}
+
+.blur.one {
+  background-color: var(--dark-color);
+  top: -14rem;
+  left: -14rem;
+}
+
+/* Card section */
+
+.cardsection {
+  margin: 5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardsection > .cards {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.cardsection > .cards > .card {
+  background-color: var(--lighter-color);
+  width: 31.5%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  transition: transform ease 0.5s;
+}
+
+.card:hover {
+  transform: translate(0, -0.5rem);
+}
+
+.cardsection > .cards > .card > .cardpic {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.cardsection > .cards > .card > .details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 1.5rem;
+}
+
+.cardsection > .cards > .card > .details > a:hover {
+  color: var(--main-dark-color);
+}
+
+/* About section */
+
+.aboutsection {
+  margin: 5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutsection > .aboutinfo {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+.aboutsection > .aboutinfo > img {
+  width: 50%;
+  border-radius: 0.5rem;
+}
+
+.aboutsection > .aboutinfo > .abouttext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutsection > .aboutinfo > .abouttext > p {
+  margin-top: 1rem;
+}
+
+.aboutsection > .aboutinfo > .abouttext > img {
+  width: 2rem;
+}
+
+/* Footer */
+
+footer {
+  margin: 5rem 0 0 0;
+  padding: 3.5rem 0 6rem 0;
+  background-color: var(--dark-color);
+}
+
+footer > .footerwrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+footer > .footerwrapper > .footerlinks {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+footer > .footerwrapper > .footerlinks > .fl {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > .footerwrapper > .logo,
+footer > .footerwrapper a {
+  color: var(--light-color);
+  padding-bottom: 0.25rem;
+}
+
+footer input {
+  background-color: var(--light-color);
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+footer input:focus {
+  outline: none;
+}
+
+footer .submit {
+  background-color: transparent;
+  color: var(--light-color);
+  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--light-color);
+  font-size: 1rem;
+}
+
+.submit:hover {
+  background-color: #ffffff25;
+  cursor: pointer;
+}
+
+footer p {
+  color: var(--light-color);
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  nav a:not(.logo) {
+    display: none;
+  }
+
+  main > .herosection {
+    text-align: center;
+  }
+
+  main > img {
+    width: 75%;
+    margin-left: 0;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .cardsection > .cards > .card {
+    width: 100%;
+  }
+
+  .aboutsection > .aboutinfo.left {
+    flex-direction: column;
+  }
+
+  .aboutsection > .aboutinfo.right {
+    flex-direction: column-reverse;
+  }
+
+  .aboutsection > .aboutinfo > img {
+    width: 100%
+  }
+
+  footer > .footerwrapper {
+    flex-direction: column;
+  }
+
+  footer > .footerwrapper > .footerlinks {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Desktop */
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
